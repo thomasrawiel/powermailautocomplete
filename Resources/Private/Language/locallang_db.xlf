@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="EXT:powermailautocomplete/Resources/Private/Language/locallang_db.xlf" date="2023-05-16T10:00:00Z" product-name="powermailautocomplete">
+        <header/>
+        <body>
+            <trans-unit id="groups.general" resname="groups.general">
+                <source>General</source>
+            </trans-unit>
+            <trans-unit id="groups.name" resname="groups.name">
+                <source>A person's name</source>
+            </trans-unit>
+            <trans-unit id="groups.bday" resname="groups.bday">
+                <source>Birthday</source>
+            </trans-unit>
+            <trans-unit id="none" resname="none">
+                <source>Disable attribute (Default)</source>
+            </trans-unit>
+            <trans-unit id="on" resname="on">
+                <source>Automatically complete</source>
+            </trans-unit>
+            <trans-unit id="off" resname="off">
+                <source>Do not automatically complete</source>
+            </trans-unit>
+            <trans-unit id="name" resname="name">
+                <source>Full name</source>
+            </trans-unit>
+            <trans-unit id="honorific-prefix" resname="honorific-prefix">
+                <source>Prefix or title</source>
+            </trans-unit>
+            <trans-unit id="additional-name">
+                <source>Middle name</source>
+            </trans-unit>
+            <trans-unit id="family-name" resname="family-name">
+                <source>Family name/ Last name</source>
+            </trans-unit>
+honorific-suffix"
+        </body>
+    </file>
+</xliff>
