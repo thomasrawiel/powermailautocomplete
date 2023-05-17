@@ -28,7 +28,7 @@
 defined('TYPO3') || die('Access denied.');
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
-    'powermailautocomplate',
-    'Configuration/TypoScript/',
+    'powermailautocomplete',
+    'Configuration/Typoscript/',
     'Powermail Autocomplete'
 );
