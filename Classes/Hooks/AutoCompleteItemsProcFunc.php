@@ -22,15 +22,24 @@
  *
  * This copyright notice MUST APPEAR in all copies of the script!
  *
- * Last modified: 16.05.23, 17:46
+ * Last modified: 17.05.23, 09:42
  */
 
 namespace TRAW\Powermailautocomplete\Hooks;
 
 use TRAW\Powermailautocomplete\Configuation\DefaultAutocompleteItems;
 
+/**
+ * Class AutoCompleteItemsProcFunc
+ * @package TRAW\Powermailautocomplete\Hooks
+ */
 class AutoCompleteItemsProcFunc
 {
+    /**
+     * @param array $config
+     *
+     * @return void
+     */
     public function getAutocompleteItems(array &$config)
     {
         if ($config['config']['itemsProcConfig']['useDefaultItems'] ?? false) {

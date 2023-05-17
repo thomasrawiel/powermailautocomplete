@@ -13,7 +13,7 @@
                 class="powermail_input {settings.styles.framework.fieldClasses} {vh:validation.errorClass(field:field, class:'powermail_field_error')}"
                 additionalAttributes="{vh:validation.validationDataAttribute(field:field)}"
                 id="powermail_field_{field.marker}"
-                autocomplete="{field.autocompleteToken}"
+                autocomplete="{t:autocomplete(field:field)}"
         />
     </div>
 </div>

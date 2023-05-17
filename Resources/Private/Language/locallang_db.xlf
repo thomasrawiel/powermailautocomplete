@@ -1,25 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-    <file source-language="en" datatype="plaintext" original="EXT:powermailautocomplete/Resources/Private/Language/locallang_db.xlf" date="2023-05-16T10:00:00Z" product-name="powermailautocomplete">
+    <file source-language="en" datatype="plaintext"
+          original="EXT:powermailautocomplete/Resources/Private/Language/locallang_db.xlf" date="2023-05-16T10:00:00Z"
+          product-name="powermailautocomplete">
         <header/>
         <body>
+            <trans-unit id="tca.section" resname="tca.section">
+                <source>Section name (optional)</source>
+            </trans-unit>
+            <trans-unit id="tca.purpose" resname="tca.purpose">
+                <source>Purpose (optional)</source>
+            </trans-unit>
+            <trans-unit id="tca.type" resname="tca.type">
+                <source>Type (optional)</source>
+            </trans-unit>
+            <trans-unit id="tca.token" resname="tca.token">
+                <source>Field type</source>
+            </trans-unit>
+            <trans-unit id="tca.token-description" resname="tca.token-description">
+                <source>See https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#autofill-field</source>
+            </trans-unit>
+            <trans-unit id="palette.autocomplete" resname="palette.autocomplete">
+                <source>Autocomplete options</source>
+            </trans-unit>
+            <trans-unit id="palette.additional" resname="palette.additional">
+                <source>Additional autocomplete options</source>
+            </trans-unit>
             <trans-unit id="groups.general" resname="groups.general">
                 <source>General</source>
             </trans-unit>
             <trans-unit id="groups.name" resname="groups.name">
-                <source>A person's name</source>
+                <source>Personal information</source>
             </trans-unit>
             <trans-unit id="groups.bday" resname="groups.bday">
                 <source>Birthday</source>
             </trans-unit>
+            <trans-unit id="groups.user" resname="groups.user">
+                <source>User information</source>
+            </trans-unit>
+            <trans-unit id="groups.contact" resname="groups.contact">
+                <source>Contact information</source>
+            </trans-unit>
+            <trans-unit id="groups.address" resname="groups.address">
+                <source>Individual address information</source>
+            </trans-unit>
+            <trans-unit id="groups.cc" resname="groups.cc">
+                <source>Payment information</source>
+            </trans-unit>
+            <trans-unit id="groups.tel" resname="tel">
+                <source>Telephone</source>
+            </trans-unit>
+            <trans-unit id="groups.other" resname="groups.other">
+                <source>Other</source>
+            </trans-unit>
             <trans-unit id="none" resname="none">
-                <source>Disable attribute (Default)</source>
+                <source>Default: disable attribute</source>
             </trans-unit>
             <trans-unit id="on" resname="on">
-                <source>Automatically complete</source>
+                <source>Automatically complete (on)</source>
             </trans-unit>
             <trans-unit id="off" resname="off">
-                <source>Do not automatically complete</source>
+                <source>Do not automatically complete (off)</source>
             </trans-unit>
             <trans-unit id="name" resname="name">
                 <source>Full name</source>
@@ -27,13 +68,183 @@
             <trans-unit id="honorific-prefix" resname="honorific-prefix">
                 <source>Prefix or title</source>
             </trans-unit>
-            <trans-unit id="additional-name">
+            <trans-unit id="given-name" resname="given-name">
+                <source>Given (or "first") name</source>
+            </trans-unit>
+            <trans-unit id="additional-name" resname="additional-name">
                 <source>Middle name</source>
             </trans-unit>
             <trans-unit id="family-name" resname="family-name">
-                <source>Family name/ Last name</source>
+                <source>Family (or "last") name</source>
             </trans-unit>
-honorific-suffix"
+            <trans-unit id="honorific-suffix" resname="honorific-suffix">
+                <source>Honorific suffix</source>
+            </trans-unit>
+            <trans-unit id="nickname" resname="nickname">
+                <source>Nickname</source>
+            </trans-unit>
+            <trans-unit id="sex" resname="sex">
+                <source>Gender identity</source>
+            </trans-unit>
+            <trans-unit id="email" resname="email">
+                <source>Email address</source>
+            </trans-unit>
+            <trans-unit id="impp" resname="impp">
+                <source>Instant messaging protocol endpoint</source>
+            </trans-unit>
+            <trans-unit id="url" resname="url">
+                <source>Website</source>
+            </trans-unit>
+            <trans-unit id="organization-title" resname="organization-title">
+                <source>Organization title</source>
+            </trans-unit>
+            <trans-unit id="organization" resname="organization">
+                <source>Organization</source>
+            </trans-unit>
+            <trans-unit id="street-address" resname="street-address">
+                <source>Street address</source>
+            </trans-unit>
+            <trans-unit id="address-line1" resname="address-line1">
+                <source>Address line 1</source>
+            </trans-unit>
+            <trans-unit id="address-line2" resname="address-line2">
+                <source>Address line 2</source>
+            </trans-unit>
+            <trans-unit id="address-line3" resname="address-line3">
+                <source>Address line 3</source>
+            </trans-unit>
+            <trans-unit id="address-level1" resname="address-level1">
+                <source>First administrative level</source>
+            </trans-unit>
+            <trans-unit id="address-level2" resname="address-level2">
+                <source>Second administrative level</source>
+            </trans-unit>
+            <trans-unit id="address-level3" resname="address-level3">
+                <source>Third administrative level</source>
+            </trans-unit>
+            <trans-unit id="address-level4" resname="address-level1">
+                <source>Fourth administrative level</source>
+            </trans-unit>
+            <trans-unit id="country" resname="country">
+                <source>Country or territory code</source>
+            </trans-unit>
+            <trans-unit id="country-name" resname="country-name">
+                <source>Country or territory name</source>
+            </trans-unit>
+            <trans-unit id="postal-code" resname="postal-code">
+                <source>Postal code (ZIP)</source>
+            </trans-unit>
+            <trans-unit id="tel" resname="tel">
+                <source>Full telephone no.</source>
+            </trans-unit>
+            <trans-unit id="tel-country-code" resname="tel-country-code">
+                <source>Country code</source>
+            </trans-unit>
+            <trans-unit id="tel-area-code" resname="tel-area-code">
+                <source>Area code</source>
+            </trans-unit>
+            <trans-unit id="tel-national" resname="tel-national">
+                <source>Telephone number without the county code component</source>
+            </trans-unit>
+            <trans-unit id="tel-local" resname="tel-local">
+                <source>Telephone number without the country or area code</source>
+            </trans-unit>
+            <trans-unit id="tel-local-prefix" resname="tel-local-prefix">
+                <source>Exchange number</source>
+            </trans-unit>
+            <trans-unit id="tel-local-suffix" resname="tel-local-suffix">
+                <source>Number within exchange</source>
+            </trans-unit>
+            <trans-unit id="tel-extension" resname="tel-extension">
+                <source>Internal extension code</source>
+            </trans-unit>
+            <trans-unit id="username" resname="username">
+                <source>Username</source>
+            </trans-unit>
+            <trans-unit id="new-password" resname="new-password">
+                <source>New password</source>
+            </trans-unit>
+            <trans-unit id="current-password" resname="current-password">
+                <source>Current password</source>
+            </trans-unit>
+            <trans-unit id="one-time-code" resname="one-time-code">
+                <source>One-time verification code</source>
+            </trans-unit>
+            <trans-unit id="bday" resname="bday">
+                <source>Birthday</source>
+            </trans-unit>
+            <trans-unit id="bday-day" resname="bday-day">
+                <source>Day component of birthday</source>
+            </trans-unit>
+            <trans-unit id="bday-month" resname="bday-month">
+                <source>Month component of birthday</source>
+            </trans-unit>
+            <trans-unit id="bday-year" resname="bday-year">
+                <source>Year component of birthday</source>
+            </trans-unit>
+            <trans-unit id="cc-name" resname="cc-name">
+                <source>Full name</source>
+            </trans-unit>
+            <trans-unit id="cc-given-name" resname="cc-given-name">
+                <source>Given (or "first") name</source>
+            </trans-unit>
+            <trans-unit id="cc-additional-name" resname="cc-additional-name">
+                <source>Middle name</source>
+            </trans-unit>
+            <trans-unit id="cc-family-name" resname="cc-family-name">
+                <source>Family (or "last") name</source>
+            </trans-unit>
+            <trans-unit id="cc-number" resname="cc-number">
+                <source>Identification code, e.g. CC no.</source>
+            </trans-unit>
+            <trans-unit id="cc-exp" resname="cc-exp">
+                <source>Expiration date</source>
+            </trans-unit>
+            <trans-unit id="cc-exp-month" resname="cc-exp-month">
+                <source>Month component of the expiration date</source>
+            </trans-unit>
+            <trans-unit id="cc-exp-year" resname="cc-exp-year">
+                <source>Year component of the expiration date</source>
+            </trans-unit>
+            <trans-unit id="cc-csc" resname="cc-csc">
+                <source>Security code</source>
+            </trans-unit>
+            <trans-unit id="cc-type" resname="cc-type">
+                <source>Type of payment instrument</source>
+            </trans-unit>
+            <trans-unit id="transaction-currency" resname="transaction-currency">
+                <source>Transaction currency</source>
+            </trans-unit>
+            <trans-unit id="transaction-amount" resname="transaction-amount">
+                <source>Transaction amount</source>
+            </trans-unit>
+            <trans-unit id="language" resname="language">
+                <source>Preferred language</source>
+            </trans-unit>
+            <trans-unit id="photo" resname="photo">
+                <source>Photo</source>
+            </trans-unit>
+            <trans-unit id="home" resname="home">
+                <source>Home</source>
+            </trans-unit>
+            <trans-unit id="work" resname="work">
+                <source>Work</source>
+            </trans-unit>
+            <trans-unit id="mobile" resname="mobile">
+                <source>Mobile</source>
+            </trans-unit>
+            <trans-unit id="fax" resname="fax">
+                <source>Fax</source>
+            </trans-unit>
+            <trans-unit id="pager" resname="pager">
+                <source>Pager</source>
+            </trans-unit>
+            <trans-unit id="billing" resname="billing">
+                <source>Billing</source>
+            </trans-unit>
+            <trans-unit id="shipping" resname="shipping">
+                <source>Shipping</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>
