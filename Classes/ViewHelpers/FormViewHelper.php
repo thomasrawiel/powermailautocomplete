@@ -28,14 +28,6 @@
 
 namespace TRAW\Powermailautocomplete\ViewHelpers;
 
-use TYPO3\CMS\Extbase\Mvc\Controller\MvcPropertyMappingConfigurationService;
-use TYPO3\CMS\Extbase\Mvc\RequestInterface;
-use TYPO3\CMS\Extbase\Mvc\Web\Routing\UriBuilder;
-use TYPO3\CMS\Extbase\Security\Cryptography\HashService;
-use TYPO3\CMS\Extbase\Service\ExtensionService;
-use TYPO3\CMS\Fluid\ViewHelpers\Form\AbstractFormViewHelper;
-use TYPO3\CMS\Fluid\ViewHelpers\Form\CheckboxViewHelper;
-
 /**
  * Form ViewHelper. Generates a :html:`<form>` Tag.
  *
@@ -129,7 +121,7 @@ class FormViewHelper extends \TYPO3\CMS\Fluid\ViewHelpers\FormViewHelper
         $this->removeCheckboxFieldNamesFromViewHelperVariableContainer();
 
         $autocomplete = $this->arguments['autocomplete'] ?? null;
-        if(!empty($autocomplete)) {
+        if (!empty($autocomplete)) {
             $this->tag->addAttribute('autocomplete', $autocomplete);
         }
 
