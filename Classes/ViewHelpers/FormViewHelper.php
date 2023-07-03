@@ -68,7 +68,7 @@ class FormViewHelper extends \TYPO3\CMS\Fluid\ViewHelpers\FormViewHelper
     /**
      * Initialize arguments.
      */
-    public function initializeArguments()
+    public function initializeArguments(): void
     {
         parent::initializeArguments();
         $this->registerTagAttribute('autocomplete', 'string', 'The autocomplete token',);
@@ -79,7 +79,7 @@ class FormViewHelper extends \TYPO3\CMS\Fluid\ViewHelpers\FormViewHelper
      *
      * @return string rendered form
      */
-    public function render()
+    public function render(): string
     {
         $this->setFormActionUri();
         if (isset($this->arguments['method']) && strtolower($this->arguments['method']) === 'get') {

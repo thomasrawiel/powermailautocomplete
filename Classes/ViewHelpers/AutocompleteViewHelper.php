@@ -27,7 +27,7 @@
 
 namespace TRAW\Powermailautocomplete\ViewHelpers;
 
-use TRAW\Powermailautocomplete\Domain\Model\Field;
+use In2code\Powermail\Domain\Model\Field;
 use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
 
 /**
