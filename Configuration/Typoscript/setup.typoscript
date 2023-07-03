@@ -3,8 +3,8 @@ plugin.tx_powermail {
         partialRootPaths {
             0 = EXT:powermail/Resources/Private/Partials/
             1 = EXT:powermailautocomplete/Resources/Private/Partials/
-            2 = {$plugin.tx_powermail.view.partialRootPath}
-            3 = {$plugin.tx_powermailautocomplete.view.partialRootPath}
+            5 = {$plugin.tx_powermail.view.partialRootPath}
+            10 = {$plugin.tx_powermailautocomplete.view.partialRootPath}
         }
 
         templateRootPaths {
