@@ -46,20 +46,7 @@ class FormViewHelper extends \TYPO3\CMS\Fluid\ViewHelpers\FormViewHelper
     public function initializeArguments(): void
     {
         parent::initializeArguments();
-        $this->registerTagAttribute('autocomplete', 'string', 'The autocomplete token',);
+        $this->registerTagAttribute('autocomplete', 'string', 'The autocomplete token', false);
     }
 
-    /**
-     * Render the form.
-     *
-     * @return string rendered form
-     */
-    public function render(): string
-    {
-        if (!empty($autocomplete)) {
-            $this->tag->addAttribute('autocomplete', $autocomplete);
-        }
-
-        return parent::render();
-    }
 }
