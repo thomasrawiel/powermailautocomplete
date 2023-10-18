@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 /*
  * Copyright notice
@@ -29,38 +30,12 @@
 namespace TRAW\Powermailautocomplete\ViewHelpers;
 
 /**
- * Form ViewHelper. Generates a :html:`<form>` Tag.
+ * Extends FormViewHelper class
  *
- * Basic usage
- * ===========
+ * Register attribute autocomplete for form tag
  *
- * Use :html:`<f:form>` to output an HTML :html:`<form>` tag which is targeted
- * at the specified action, in the current controller and package.
- * It will submit the form data via a POST request. If you want to change this,
- * use :html:`method="get"` as an argument.
- *
- * Examples
- * ========
- *
- * A complex form with a specified encoding type
- * ---------------------------------------------
- *
- * Form with enctype set::
- *
- *    <f:form action=".." controller="..." package="..." enctype="multipart/form-data">...</f:form>
- *
- * A Form which should render a domain object
- * ------------------------------------------
- *
- * Binding a domain object to a form::
- *
- *    <f:form action="..." name="customer" object="{customer}">
- *       <f:form.hidden property="id" />
- *       <f:form.textbox property="name" />
- *    </f:form>
- *
- * This automatically inserts the value of ``{customer.name}`` inside the
- * textbox and adjusts the name of the textbox accordingly.
+ * For more information:
+ * @see \TYPO3\CMS\Fluid\ViewHelpers\FormViewHelper
  */
 class FormViewHelper extends \TYPO3\CMS\Fluid\ViewHelpers\FormViewHelper
 {
@@ -81,50 +56,10 @@ class FormViewHelper extends \TYPO3\CMS\Fluid\ViewHelpers\FormViewHelper
      */
     public function render(): string
     {
-        $this->setFormActionUri();
-        if (isset($this->arguments['method']) && strtolower($this->arguments['method']) === 'get') {
-            $this->tag->addAttribute('method', 'get');
-        } else {
-            $this->tag->addAttribute('method', 'post');
-        }
-
-        if (isset($this->arguments['novalidate']) && $this->arguments['novalidate'] === true) {
-            $this->tag->addAttribute('novalidate', 'novalidate');
-        }
-
-        $this->addFormObjectNameToViewHelperVariableContainer();
-        $this->addFormObjectToViewHelperVariableContainer();
-        $this->addFieldNamePrefixToViewHelperVariableContainer();
-        $this->addFormFieldNamesToViewHelperVariableContainer();
-        $formContent = $this->renderChildren();
-
-        if (isset($this->arguments['hiddenFieldClassName']) && $this->arguments['hiddenFieldClassName'] !== null) {
-            $content = LF . '<div class="' . htmlspecialchars($this->arguments['hiddenFieldClassName']) . '">';
-        } else {
-            $content = LF . '<div>';
-        }
-
-        $content .= $this->renderHiddenIdentityField($this->arguments['object'] ?? null, $this->getFormObjectName());
-        $content .= $this->renderAdditionalIdentityFields();
-        $content .= $this->renderHiddenReferrerFields();
-
-        // Render the trusted list of all properties after everything else has been rendered
-        $content .= $this->renderTrustedPropertiesField();
-
-        $content .= LF . '</div>' . LF;
-        $content .= $formContent;
-        $this->tag->setContent($content);
-        $this->removeFieldNamePrefixFromViewHelperVariableContainer();
-        $this->removeFormObjectFromViewHelperVariableContainer();
-        $this->removeFormObjectNameFromViewHelperVariableContainer();
-        $this->removeFormFieldNamesFromViewHelperVariableContainer();
-        $this->removeCheckboxFieldNamesFromViewHelperVariableContainer();
-
-        $autocomplete = $this->arguments['autocomplete'] ?? null;
         if (!empty($autocomplete)) {
             $this->tag->addAttribute('autocomplete', $autocomplete);
         }
 
-        return $this->tag->render();
+        return parent::render();
     }
 }
