@@ -1,5 +1,4 @@
 <?php
-
 declare(strict_types=1);
 
 /*
@@ -48,7 +47,7 @@ use TYPO3\CMS\Fluid\ViewHelpers\Form\AbstractFormFieldViewHelper;
  *
  *    <textarea name="myTextArea">This is shown inside the textarea</textarea>
  */
-class TextareaViewHelper extends AbstractFormFieldViewHelper
+final class TextareaViewHelper extends AbstractFormFieldViewHelper
 {
     /**
      * @var string
@@ -86,11 +85,6 @@ class TextareaViewHelper extends AbstractFormFieldViewHelper
         $this->addAdditionalIdentityPropertiesIfNeeded();
         $this->setErrorClassAttribute();
 
-
-        $autocomplete = $this->arguments['autocomplete'] ?? null;
-        if(!empty($autocomplete)) {
-            $this->tag->addAttribute('autocomplete', $autocomplete);
-        }
         return $this->tag->render();
     }
 }
