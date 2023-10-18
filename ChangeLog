@@ -1,0 +1,4 @@
+2023-10-18         [RELEASE] Release of powermailautocomplete 2.2.0 (Vladimir Falcon)
+2023-10-18 961e3df Simplify Form Text and Textarea ViewHelpers. (Vladimir Falcon)
+2023-10-18 32a72d3 Simplify class FormViewHelper to improve backward compatibility (Vladimir Falcon)
+2023-10-18 4d247a4 Update powermail requirement (Vladimir Falcon Piva)
