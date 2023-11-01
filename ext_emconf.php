@@ -33,11 +33,11 @@ $EM_CONF[$_EXTKEY] = [
     'author_email' => 'thomas.rawiel@gmail.com',
     'state' => 'stable',
     'clearCacheOnLoad' => 0,
-    'version' => '2.1.0',
+    'version' => '2.2.0',
     'constraints' => [
         'depends' => [
             'typo3' => '11.5.0-12.4.99',
-            'powermail' => '9.0.0-11.99.99',
+            'powermail' => '9.0.0-12.99.99',
             'extender' => '',
         ],
         'conflicts' => [],
