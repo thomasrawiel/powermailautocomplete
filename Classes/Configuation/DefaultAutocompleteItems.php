@@ -29,7 +29,6 @@ namespace TRAW\Powermailautocomplete\Configuation;
 
 /**
  * Class DefaultAutocompleteItems
- * @package TRAW\Powermailautocomplete\Configuation
  */
 class DefaultAutocompleteItems
 {

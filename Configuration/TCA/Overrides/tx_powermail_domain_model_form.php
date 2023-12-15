@@ -42,7 +42,7 @@ defined('TYPO3') || die('Access denied.');
                 ['LLL:EXT:powermailautocomplete/Resources/Private/Language/locallang_db.xlf:off', 'off'],
             ],
             'behaviour' => [
-                'allowLanguageSynchronization' => true
+                'allowLanguageSynchronization' => true,
             ],
         ],
     ],
@@ -50,7 +50,7 @@ defined('TYPO3') || die('Access denied.');
 
 $GLOBALS['TCA']['tx_powermail_domain_model_form']['palettes']['autocomplete'] = [
     'label' => 'LLL:EXT:powermailautocomplete/Resources/Private/Language/locallang_db.xlf:palette.autocomplete',
-    'showitem' => 'autocomplete_token'
+    'showitem' => 'autocomplete_token',
 ];
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes('tx_powermail_domain_model_form', '--palette--;;autocomplete', '', 'after:css');

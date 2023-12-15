@@ -25,13 +25,12 @@
  * Last modified: 16.05.23, 19:24
  */
 
-declare(strict_types = 1);
-namespace TRAW\Powermailautocomplete\Domain\Model;
+declare(strict_types=1);
 
+namespace TRAW\Powermailautocomplete\Domain\Model;
 
 /**
  * Class Field
- * @package TRAW\Powermailautocomplete\Domain\Model
  */
 class Form extends \In2code\Powermail\Domain\Model\Form
 {

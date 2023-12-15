@@ -37,7 +37,7 @@ defined('TYPO3') || die('Access denied.');
             'eval' => 'trim',
             'max' => '100',
             'behaviour' => [
-                'allowLanguageSynchronization' => true
+                'allowLanguageSynchronization' => true,
             ],
         ],
         'displayCond' => [
@@ -45,7 +45,7 @@ defined('TYPO3') || die('Access denied.');
                 'FIELD:type:IN:input,textarea',
                 'FIELD:autocomplete_token:!IN:on,off',
                 'FIELD:autocomplete_token:REQ:true',
-            ]
+            ],
         ],
     ],
     'autocomplete_type' => [
@@ -57,7 +57,7 @@ defined('TYPO3') || die('Access denied.');
             'items' => [
                 ['', ''],
                 ['LLL:EXT:powermailautocomplete/Resources/Private/Language/locallang_db.xlf:billing', 'billing'],
-                ['LLL:EXT:powermailautocomplete/Resources/Private/Language/locallang_db.xlf:shipping', 'shipping']
+                ['LLL:EXT:powermailautocomplete/Resources/Private/Language/locallang_db.xlf:shipping', 'shipping'],
             ],
         ],
         'displayCond' => [
@@ -65,7 +65,7 @@ defined('TYPO3') || die('Access denied.');
                 'FIELD:type:IN:input,textarea',
                 'FIELD:autocomplete_token:!IN:on,off',
                 'FIELD:autocomplete_token:REQ:true',
-            ]
+            ],
         ],
     ],
     'autocomplete_purpose' => [
@@ -87,9 +87,9 @@ defined('TYPO3') || die('Access denied.');
         'displayCond' => [
             'AND' => [
                 'FIELD:type:IN:input,textarea',
-                'FIELD:autocomplete_token:IN:email,impp,tel,tel-country-code,tel-national,tel-area-code,tel-local,tel-local-prefix,tel-local-suffix,tel-extension'
+                'FIELD:autocomplete_token:IN:email,impp,tel,tel-country-code,tel-national,tel-area-code,tel-local,tel-local-prefix,tel-local-suffix,tel-extension',
             ],
-        ]
+        ],
     ],
     'autocomplete_token' => [
         'label' => 'LLL:EXT:powermailautocomplete/Resources/Private/Language/locallang_db.xlf:tca.token',
@@ -121,14 +121,14 @@ defined('TYPO3') || die('Access denied.');
             ],
             'default' => '',
             'behaviour' => [
-                'allowLanguageSynchronization' => true
+                'allowLanguageSynchronization' => true,
             ],
         ],
         'displayCond' => [
             'OR' => [
                 'FIELD:type:=:input',
                 'FIELD:type:=:textarea',
-            ]
+            ],
         ],
     ],
 ]);
@@ -136,9 +136,9 @@ defined('TYPO3') || die('Access denied.');
 
 $GLOBALS['TCA']['tx_powermail_domain_model_field']['palettes']['autocomplete'] = [
     'label' => 'LLL:EXT:powermailautocomplete/Resources/Private/Language/locallang_db.xlf:palette.autocomplete',
-    'showitem' => 'autocomplete_token,autocomplete_purpose'
+    'showitem' => 'autocomplete_token,autocomplete_purpose',
 ];
 $GLOBALS['TCA']['tx_powermail_domain_model_field']['palettes']['autocomplete_additional'] = [
     'label' => 'LLL:EXT:powermailautocomplete/Resources/Private/Language/locallang_db.xlf:palette.additional',
-    'showitem' => 'autocomplete_section,autocomplete_type'
+    'showitem' => 'autocomplete_section,autocomplete_type',
 ];

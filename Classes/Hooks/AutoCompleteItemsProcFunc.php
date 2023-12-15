@@ -31,14 +31,11 @@ use TRAW\Powermailautocomplete\Configuation\DefaultAutocompleteItems;
 
 /**
  * Class AutoCompleteItemsProcFunc
- * @package TRAW\Powermailautocomplete\Hooks
  */
 class AutoCompleteItemsProcFunc
 {
     /**
      * @param array $config
-     *
-     * @return void
      */
     public function getAutocompleteItems(array &$config)
     {

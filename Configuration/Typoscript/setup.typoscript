@@ -1,17 +1,17 @@
 plugin.tx_powermail {
-    view {
-        partialRootPaths {
-            0 = EXT:powermail/Resources/Private/Partials/
-            2 = EXT:powermailautocomplete/Resources/Private/Partials/
-            5 = {$plugin.tx_powermail.view.partialRootPath}
-            10 = {$plugin.tx_powermailautocomplete.view.partialRootPath}
-        }
-
-        templateRootPaths {
-            0 = EXT:powermail/Resources/Private/Templates/
-            1 = EXT:powermailautocomplete/Resources/Private/Templates/
-            2 = {$plugin.tx_powermail.view.templateRootPath}
-            3 = {$plugin.tx_powermailautocomplete.view.templateRootPath}
-        }
+  view {
+    partialRootPaths {
+      0 = EXT:powermail/Resources/Private/Partials/
+      2 = EXT:powermailautocomplete/Resources/Private/Partials/
+      5 = {$plugin.tx_powermail.view.partialRootPath}
+      10 = {$plugin.tx_powermailautocomplete.view.partialRootPath}
     }
+
+    templateRootPaths {
+      0 = EXT:powermail/Resources/Private/Templates/
+      1 = EXT:powermailautocomplete/Resources/Private/Templates/
+      2 = {$plugin.tx_powermail.view.templateRootPath}
+      3 = {$plugin.tx_powermailautocomplete.view.templateRootPath}
+    }
+  }
 }

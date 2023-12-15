@@ -29,10 +29,8 @@ declare(strict_types=1);
 
 namespace TRAW\Powermailautocomplete\Domain\Model;
 
-
 /**
  * Class Field
- * @package TRAW\Powermailautocomplete\Domain\Model
  */
 class Field extends \In2code\Powermail\Domain\Model\Field
 {

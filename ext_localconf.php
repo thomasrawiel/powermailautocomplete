@@ -31,4 +31,3 @@ $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['powermail']['extender'][\In2code\Powe
     = \TRAW\Powermailautocomplete\Domain\Model\Field::class;
 $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['powermail']['extender'][\In2code\Powermail\Domain\Model\Form::class]['powermailautocomplete']
     = \TRAW\Powermailautocomplete\Domain\Model\Form::class;
-

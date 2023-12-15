@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 /*
@@ -39,7 +40,6 @@ namespace TRAW\Powermailautocomplete\ViewHelpers;
  */
 class FormViewHelper extends \TYPO3\CMS\Fluid\ViewHelpers\FormViewHelper
 {
-
     /**
      * Initialize arguments.
      */
@@ -48,5 +48,4 @@ class FormViewHelper extends \TYPO3\CMS\Fluid\ViewHelpers\FormViewHelper
         parent::initializeArguments();
         $this->registerTagAttribute('autocomplete', 'string', 'The autocomplete token', false);
     }
-
 }

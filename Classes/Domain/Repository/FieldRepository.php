@@ -29,8 +29,5 @@ namespace TRAW\Powermailautocomplete\Domain\Repository;
 
 /**
  * Class FieldRepository
- * @package TRAW\Powermailautocomplete\Domain\Repository
  */
-class FieldRepository extends \In2code\Powermail\Domain\Repository\FieldRepository
-{
-}
+class FieldRepository extends \In2code\Powermail\Domain\Repository\FieldRepository {}

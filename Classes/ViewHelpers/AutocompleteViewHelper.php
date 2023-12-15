@@ -32,13 +32,9 @@ use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
 
 /**
  * Class AutocompleteViewHelper
- * @package TRAW\Powermailautocomplete\ViewHelpers
  */
 class AutocompleteViewHelper extends AbstractViewHelper
 {
-    /**
-     * @return void
-     */
     public function initializeArguments()
     {
         parent::initializeArguments();
@@ -60,7 +56,7 @@ class AutocompleteViewHelper extends AbstractViewHelper
             $field->getAutocompleteToken(),
             trim($field->getAutocompleteSection()),
             $field->getAutocompleteType(),
-            $field->getAutocompletePurpose()
+            $field->getAutocompletePurpose(),
         ];
 
         //if token is empty or 'on'/'off' other tokens are not allowed

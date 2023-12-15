@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 /*
@@ -65,7 +66,7 @@ final class TextareaViewHelper extends AbstractFormFieldViewHelper
         $this->registerArgument('errorClass', 'string', 'CSS class to set if there are errors for this ViewHelper', false, 'f3-form-error');
         $this->registerTagAttribute('readonly', 'string', 'The readonly attribute of the textarea', false);
         $this->registerArgument('required', 'bool', 'Specifies whether the textarea is required', false, false);
-        $this->registerTagAttribute('autocomplete', 'string', 'The autocomplete token',);
+        $this->registerTagAttribute('autocomplete', 'string', 'The autocomplete token');
         $this->registerUniversalTagAttributes();
     }
 

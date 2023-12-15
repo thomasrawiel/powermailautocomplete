@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 /*
@@ -62,7 +63,7 @@ final class TextfieldViewHelper extends AbstractFormFieldViewHelper
         $this->registerTagAttribute('size', 'int', 'The size of the input field');
         $this->registerTagAttribute('placeholder', 'string', 'The placeholder of the textfield');
         $this->registerTagAttribute('pattern', 'string', 'HTML5 validation pattern');
-        $this->registerTagAttribute('autocomplete', 'string', 'The autocomplete token',);
+        $this->registerTagAttribute('autocomplete', 'string', 'The autocomplete token');
         $this->registerArgument('errorClass', 'string', 'CSS class to set if there are errors for this ViewHelper', false, 'f3-form-error');
         $this->registerUniversalTagAttributes();
         $this->registerArgument('required', 'bool', 'If the field is required or not', false, false);
