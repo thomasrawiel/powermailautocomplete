@@ -6,3 +6,13 @@ services:
     
   TRAW\Powermailautocomplete\:
     resource: '../Classes/*'
+
+  TRAW\Powermailautocomplete\Domain\Model\Field:
+    tags:
+      - name: 'extender.extends'
+        class: In2code\Powermail\Domain\Model\Field
+
+  TRAW\Powermailautocomplete\Domain\Model\Form: 
+    tags:
+      - name: 'extender.extends'
+        class: In2code\Powermail\Domain\Model\Form
