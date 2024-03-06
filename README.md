@@ -29,4 +29,14 @@ Available values and explanations can be found in the references section
 - https://wiki.selfhtml.org/wiki/HTML/Attribute/autocomplete#autocomplete_und_Autofill
 - https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete
 
- 
+
+### Known Problems:
+TYPO3 Exception when using evoweb/extender 10.1.0
+
+Solution: Use evoweb/extender develop branch
+
+In your root composer.json add the following in the require section
+````
+"traw/powermailautocomplete": "2.2.2",
+"evoweb/extender": "dev-develop as 10.99.99"
+
