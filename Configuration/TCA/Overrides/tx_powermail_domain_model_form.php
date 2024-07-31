@@ -36,7 +36,6 @@ $typo3_11 = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core
         'label' => 'LLL:EXT:powermailautocomplete/Resources/Private/Language/locallang_db.xlf:tca.token',
         'description' => 'LLL:EXT:powermailautocomplete/Resources/Private/Language/locallang_db.xlf:tca.token-description',
         'config' => [
-            'exclude' => false,
             'type' => 'select',
             'renderType' => 'selectSingle',
             'items' => $typo3_11 ? [
