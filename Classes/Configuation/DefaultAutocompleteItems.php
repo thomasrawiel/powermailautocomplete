@@ -24,6 +24,7 @@
  *
  * Last modified: 17.05.23, 14:15
  */
+declare(strict_types=1);
 
 namespace TRAW\Powermailautocomplete\Configuation;
 

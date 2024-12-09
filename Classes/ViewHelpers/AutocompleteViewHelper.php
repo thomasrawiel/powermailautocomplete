@@ -24,7 +24,7 @@
  *
  * Last modified: 17.05.23, 14:03
  */
-
+declare(strict_types=1);
 namespace TRAW\Powermailautocomplete\ViewHelpers;
 
 use In2code\Powermail\Domain\Model\Field;

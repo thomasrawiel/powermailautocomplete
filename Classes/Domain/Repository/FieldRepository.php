@@ -24,6 +24,7 @@
  *
  * Last modified: 16.05.23, 19:24
  */
+declare(strict_types=1);
 
 namespace TRAW\Powermailautocomplete\Domain\Repository;
 
