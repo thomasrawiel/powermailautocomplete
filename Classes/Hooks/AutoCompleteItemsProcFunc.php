@@ -40,10 +40,8 @@ class AutoCompleteItemsProcFunc
      */
     public function getAutocompleteItems(array &$config)
     {
-        $typo3Version = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Information\Typo3Version::class)->getMajorVersion();
-
         if ($config['config']['itemsProcConfig']['useDefaultItems'] ?? false) {
-            $defaultSelectItems = $typo3Version < 12 ? DefaultAutocompleteItems::getSelectItemsVersion11() : DefaultAutocompleteItems::getSelectItems();
+            $defaultSelectItems = DefaultAutocompleteItems::getSelectItems();
             $config['items'] = array_merge(
                 $config['items'],
                 $defaultSelectItems

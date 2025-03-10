@@ -22,7 +22,7 @@
  *
  * This copyright notice MUST APPEAR in all copies of the script!
  *
- * Last modified: 17.05.23, 14:15
+ * Last modified: 10.03.2025 13:37
  */
 declare(strict_types=1);
 
@@ -34,69 +34,6 @@ namespace TRAW\Powermailautocomplete\Configuation;
 class DefaultAutocompleteItems
 {
     public static string $LLL = 'LLL:EXT:powermailautocomplete/Resources/Private/Language/locallang_db.xlf:';
-
-    /**
-     * @return array[]
-     */
-    public static function getSelectItemsVersion11(): array
-    {
-        return [
-            [self::$LLL . 'name', 'name', '', 'name'],
-            [self::$LLL . 'honorific-prefix', 'honorific-prefix', '', 'name'],
-            [self::$LLL . 'given-name', 'given-name', '', 'name'],
-            [self::$LLL . 'additional-name', 'additional-name', '', 'name'],
-            [self::$LLL . 'family-name', 'family-name', '', 'name'],
-            [self::$LLL . 'honorific-suffix', 'honorific-suffix', '', 'name'],
-            [self::$LLL . 'nickname', 'nickname', '', 'name'],
-            [self::$LLL . 'sex', 'sex', '', 'name'],
-            [self::$LLL . 'email', 'email', '', 'contact'],
-            [self::$LLL . 'impp', 'impp', '', 'contact'],
-            [self::$LLL . 'url', 'url', '', 'contact'],
-            [self::$LLL . 'organization-title', 'organization-title', '', 'contact'],
-            [self::$LLL . 'organization', 'organization', '', 'contact'],
-            [self::$LLL . 'street-address', 'street-address', '', 'contact'],
-            [self::$LLL . 'country', 'country', '', 'contact'],
-            [self::$LLL . 'country-name', 'country-name', '', 'contact'],
-            [self::$LLL . 'postal-code', 'postal-code', '', 'contact'],
-            [self::$LLL . 'address-line1', 'address-line1', '', 'address'],
-            [self::$LLL . 'address-line2', 'address-line2', '', 'address'],
-            [self::$LLL . 'address-line3', 'address-line3', '', 'address'],
-            [self::$LLL . 'address-level1', 'address-level1', '', 'address'],
-            [self::$LLL . 'address-level2', 'address-level2', '', 'address'],
-            [self::$LLL . 'address-level3', 'address-level3', '', 'address'],
-            [self::$LLL . 'address-level4', 'address-level4', '', 'address'],
-            [self::$LLL . 'tel', 'tel', '', 'tel'],
-            [self::$LLL . 'tel-country-code', 'tel-country-code', '', 'tel'],
-            [self::$LLL . 'tel-area-code', 'tel-area-code', '', 'tel'],
-            [self::$LLL . 'tel-national', 'tel-national', '', 'tel'],
-            [self::$LLL . 'tel-local', 'tel-local', '', 'tel'],
-            [self::$LLL . 'tel-local-prefix', 'tel-local-prefix', '', 'tel'],
-            [self::$LLL . 'tel-local-suffix', 'tel-local-suffix', '', 'tel'],
-            [self::$LLL . 'tel-extension', 'tel-extension', '', 'tel'],
-            [self::$LLL . 'username', 'username', '', 'user'],
-            [self::$LLL . 'new-password', 'new-password', '', 'user'],
-            [self::$LLL . 'current-password', 'current-password', '', 'user'],
-            [self::$LLL . 'one-time-code', 'one-time-code', '', 'user'],
-            [self::$LLL . 'bday', 'bday', '', 'bday'],
-            [self::$LLL . 'bday-day', 'bday-day', '', 'bday'],
-            [self::$LLL . 'bday-month', 'bday-month', '', 'bday'],
-            [self::$LLL . 'bday-year', 'bday-year', '', 'bday'],
-            [self::$LLL . 'cc-name', 'cc-name', '', 'cc'],
-            [self::$LLL . 'cc-given-name', 'cc-given-name', '', 'cc'],
-            [self::$LLL . 'cc-additional-name', 'cc-additional-name', '', 'cc'],
-            [self::$LLL . 'cc-family-name', 'cc-family-name', '', 'cc'],
-            [self::$LLL . 'cc-number', 'cc-number', '', 'cc'],
-            [self::$LLL . 'cc-exp', 'cc-exp', '', 'cc'],
-            [self::$LLL . 'cc-exp-month', 'cc-exp-month', '', 'cc'],
-            [self::$LLL . 'cc-exp-year', 'cc-exp-year', '', 'cc'],
-            [self::$LLL . 'cc-csc', 'cc-csc', '', 'cc'],
-            [self::$LLL . 'cc-type', 'cc-type', '', 'cc'],
-            [self::$LLL . 'transaction-currency', 'transaction-currency', '', 'cc'],
-            [self::$LLL . 'transaction-amount', 'transaction-amount', '', 'cc'],
-            [self::$LLL . 'language', 'language', '', 'other'],
-            [self::$LLL . 'photo', 'photo', '', 'name'],
-        ];
-    }
 
     /**
      * @return array[]
@@ -160,5 +97,4 @@ class DefaultAutocompleteItems
             ['label' => self::$LLL . 'photo', 'value' => 'photo', 'icon' => '', 'group' => 'other'],
         ];
     }
-
 }

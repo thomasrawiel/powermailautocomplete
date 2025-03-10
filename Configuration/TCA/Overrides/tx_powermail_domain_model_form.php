@@ -22,13 +22,10 @@
  *
  * This copyright notice MUST APPEAR in all copies of the script!
  *
- * Last modified: 16.05.23, 19:24
+ * Last modified: 10.03.2025 13:37
  */
 
 defined('TYPO3') || die('Access denied.');
-
-//if TYPO3 11 or earlier, we configure the select items differently
-$typo3_11 = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Information\Typo3Version::class)->getMajorVersion() < 12;
 
 //add autocomplete tokens, see https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('tx_powermail_domain_model_form', [
@@ -38,11 +35,7 @@ $typo3_11 = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core
         'config' => [
             'type' => 'select',
             'renderType' => 'selectSingle',
-            'items' => $typo3_11 ? [
-                ['LLL:EXT:powermailautocomplete/Resources/Private/Language/locallang_db.xlf:none', ''],
-                ['LLL:EXT:powermailautocomplete/Resources/Private/Language/locallang_db.xlf:on', 'on'],
-                ['LLL:EXT:powermailautocomplete/Resources/Private/Language/locallang_db.xlf:off', 'off'],
-            ] : [
+            'items' => [
                 ['label' => 'LLL:EXT:powermailautocomplete/Resources/Private/Language/locallang_db.xlf:none', 'value' => ''],
                 ['label' => 'LLL:EXT:powermailautocomplete/Resources/Private/Language/locallang_db.xlf:on', 'value' => 'on'],
                 ['label' => 'LLL:EXT:powermailautocomplete/Resources/Private/Language/locallang_db.xlf:off', 'value' => 'off'],
