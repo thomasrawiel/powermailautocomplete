@@ -14,10 +14,10 @@
     }
   ],
   "require": {
-    "typo3/cms-core": "^11.5 || ^12.4",
+    "typo3/cms-core": "^11.5 || ^12.4 || ^13.4",
     "php": "^7.4 || ^8.0",
-    "in2code/powermail": "^9.0 ||  ^10.5 || ^11.0 || ^12.0",
-    "evoweb/extender": "^9.0 || ^10"
+    "in2code/powermail": "^9.0 ||  ^10.5 || ^11.0 || ^12.0 || ^13 || dev-master",
+    "evoweb/extender": "^9.0 || ^10 || ^11"
   },
   "license": "GPL-3.0-or-later",
   "autoload": {
