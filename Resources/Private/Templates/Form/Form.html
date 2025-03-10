@@ -30,15 +30,22 @@ Render Powermail Form
 					<f:if condition="{form.css} != 'nolabel'">
 						<h3>{form.title}</h3>
 					</f:if>
-					<f:render partial="Misc/FormError" arguments="{_all}" />
+                    <f:render partial="Misc/FormError" arguments="{_all}"/>
 
-					<f:for each="{form.pages}" as="page">
-						<f:render partial="Form/Page" arguments="{_all}" />
+                    <f:if condition="{settings.main.moresteps}">
+                        <div class="btn-group powermail_multistep_navigation" role="group" aria-label="Multistep form page">
+                            <f:for each="{form.pages}" as="page" iteration="iterationPages">
+                                <button class="btn btn-secondary{f:if(condition:iterationPages.isFirst,then:' active')}" type="button" data-powermail-fieldset="{page.uid}" data-powermail-morestep-current="{iterationPages.index}" data-powermail-morestep-show="{iterationPages.index}">{page.title}</button>
+                            </f:for>
+                        </div>
+                    </f:if>
+
+                    <f:for each="{form.pages}" as="page" iteration="iterationPages">
+                        <f:render partial="Form/Page" arguments="{_all}"/>
 					</f:for>
-
-					<f:form.hidden name="mail[form]" value="{form.uid}" class="powermail_form_uid" />
-					<f:render partial="Misc/HoneyPod" arguments="{form:form}" />
-				</t:form>
+                    <f:form.hidden name="mail[form]" value="{form.uid}" class="powermail_form_uid" respectSubmittedDataValue="false" />
+                    <f:render partial="Misc/HoneyPod" arguments="{form:form}"/>
+                </t:form>
 			</div>
 		</f:then>
 		<f:else>
