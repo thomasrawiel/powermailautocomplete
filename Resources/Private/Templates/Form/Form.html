@@ -16,7 +16,7 @@ Render Powermail Form
 	<f:if condition="{form}">
 		<f:then>
 			<div class="container-fluid">
-				<t:form
+				<f:form
 						action="{action}"
 						section="c{ttContentData.uid}"
 						name="field"
@@ -45,7 +45,7 @@ Render Powermail Form
 					</f:for>
                     <f:form.hidden name="mail[form]" value="{form.uid}" class="powermail_form_uid" respectSubmittedDataValue="false" />
                     <f:render partial="Misc/HoneyPod" arguments="{form:form}"/>
-                </t:form>
+                </f:form>
 			</div>
 		</f:then>
 		<f:else>

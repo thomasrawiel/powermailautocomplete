@@ -15,7 +15,7 @@
   ],
   "require": {
     "php": "^7.4 || ^8.0",
-    "typo3/cms-core": "^12.4 || ^13.4",
+    "typo3/cms-core": "^12.4.18 || ^13.4",
     "in2code/powermail": "^12.0 || ^13 || dev-master",
     "evoweb/extender": "^10 || ^11"
   },
