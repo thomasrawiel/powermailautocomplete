@@ -65,7 +65,7 @@ class DefaultAutocompleteItems
             ['label' => self::$LLL . 'address-level2', 'value' => 'address-level2', 'icon' => '', 'group' => 'address'],
             ['label' => self::$LLL . 'address-level3', 'value' => 'address-level3', 'icon' => '', 'group' => 'address'],
             ['label' => self::$LLL . 'address-level4', 'value' => 'address-level4', 'icon' => '', 'group' => 'address'],
-            ['label' => self::$LLL . 'tel', 'value' => 'tel', 'icon' => '', 'tel'],
+            ['label' => self::$LLL . 'tel', 'value' => 'tel', 'icon' => '', 'group' => 'tel'],
             ['label' => self::$LLL . 'tel-country-code', 'value' => 'tel-country-code', 'icon' => '', 'group' => 'tel'],
             ['label' => self::$LLL . 'tel-area-code', 'value' => 'tel-area-code', 'icon' => '', 'group' => 'tel'],
             ['label' => self::$LLL . 'tel-national', 'value' => 'tel-national', 'icon' => '', 'group' => 'tel'],
