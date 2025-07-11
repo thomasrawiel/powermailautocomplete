@@ -96,43 +96,52 @@ class AutocompleteViewHelper extends AbstractViewHelper
 
 
     /**
-     * @param string $token
-     * @param string $type
+     * Checks if the given type token is allowed for the specified autocomplete field token.
      *
-     * @return bool
+     * Based on WHATWG HTML Spec:
+     * https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#autofill
      */
     protected function tokenIsAllowedForType(string $token, string $type): bool
     {
         $allowedTypes = ['shipping', 'billing'];
-        $tokensNotSupportingType = ['nickname', 'sex', 'impp', 'url', 'organization-title', 'tel-country-code', 'tel-area-code', 'tel-national', 'tel-local', 'tel-local-prefix', 'tel-local-suffix', 'tel-extension', 'username', 'new-password', 'current-password', 'one-time-code', 'bday', 'bday-day', 'bday-month', 'bday-year', 'language', 'photo'];
+        $tokensNotSupportingType = [
+            'nickname', 'sex', 'impp', 'url', 'organization-title',
+            'tel-country-code', 'tel-area-code', 'tel-national', 'tel-local',
+            'tel-local-prefix', 'tel-local-suffix', 'tel-extension',
+            'username', 'new-password', 'current-password', 'one-time-code',
+            'bday', 'bday-day', 'bday-month', 'bday-year', 'language', 'photo'
+        ];
         return in_array($type, $allowedTypes)
             && !in_array($token, $tokensNotSupportingType);
     }
 
-
     /**
-     * @param string $token
-     * @param string $purpose
+     * Checks if the given purpose token is allowed for the specified autocomplete field token.
      *
-     * @return bool
+     * Based on WHATWG HTML Spec:
+     * https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#autofill
      */
     protected function tokenIsAllowedForPurpose(string $token, string $purpose): bool
     {
         $allowedPurposes = ['home', 'work', 'mobile', 'fax', 'pager'];
         $tokensSupportingPurpose = ['tel', 'email', 'impp'];
-
-        return in_array($type, $allowedPurposes, true)
-            && !in_array($token, $tokensSupportingPurpose, true);
+        return in_array($purpose, $allowedPurposes, true)
+            && in_array($token, $tokensSupportingPurpose, true);
     }
 
     /**
-     * @param string $token
+     * Checks if the given autocomplete field token allows a section token prefix.
      *
-     * @return bool
+     * Based on WHATWG HTML Spec:
+     * https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#autofill
      */
     protected function tokenIsAllowedForSection(string $token): bool
     {
-        $tokensNotSupportingSection = ['nickname', 'sex', 'impp', 'url', 'organization-title', 'username', 'new-password', 'current-password', 'one-time-code', 'bday', 'bday-day', 'bday-month', 'bday-year', 'language', 'photo'];
+        $tokensNotSupportingSection = [
+            'nickname', 'sex', 'impp', 'url', 'organization-title',
+            'username', 'new-password', 'current-password', 'one-time-code',
+            'bday', 'bday-day', 'bday-month', 'bday-year', 'language', 'photo'
+        ];
         return !in_array($token, $tokensNotSupportingSection, true);
     }
 }
