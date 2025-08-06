@@ -1,4 +1,5 @@
 <?php
+
 /*
  * Copyright notice
  *
@@ -34,85 +35,49 @@ namespace TRAW\Powermailautocomplete\Domain\Model;
  */
 class Field extends \In2code\Powermail\Domain\Model\Field
 {
-    /**
-     * @var string
-     */
     protected string $autocompleteToken = '';
 
-    /**
-     * @var string
-     */
     protected string $autocompleteSection = '';
 
-    /**
-     * @var string
-     */
     protected string $autocompleteType = '';
 
-    /**
-     * @var string
-     */
     protected string $autocompletePurpose = '';
 
-    /**
-     * @return string
-     */
     public function getAutocompleteSection(): string
     {
         return $this->autocompleteSection;
     }
 
-    /**
-     * @param string $autocompleteSection
-     */
     public function setAutocompleteSection(string $autocompleteSection): void
     {
         $this->autocompleteSection = $autocompleteSection;
     }
 
-    /**
-     * @return string
-     */
     public function getAutocompleteType(): string
     {
         return $this->autocompleteType;
     }
 
-    /**
-     * @param string $autocompleteType
-     */
     public function setAutocompleteType(string $autocompleteType): void
     {
         $this->autocompleteType = $autocompleteType;
     }
 
-    /**
-     * @return string
-     */
     public function getAutocompletePurpose(): string
     {
         return $this->autocompletePurpose;
     }
 
-    /**
-     * @param string $autocompletePurpose
-     */
     public function setAutocompletePurpose(string $autocompletePurpose): void
     {
         $this->autocompletePurpose = $autocompletePurpose;
     }
 
-    /**
-     * @return string
-     */
     public function getAutocompleteToken(): string
     {
         return $this->autocompleteToken;
     }
 
-    /**
-     * @param string $autocompleteToken
-     */
     public function setAutocompleteToken(string $autocompleteToken): void
     {
         $this->autocompleteToken = $autocompleteToken;

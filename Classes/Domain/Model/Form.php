@@ -1,4 +1,5 @@
 <?php
+
 /*
  * Copyright notice
  *
@@ -34,22 +35,13 @@ namespace TRAW\Powermailautocomplete\Domain\Model;
  */
 class Form extends \In2code\Powermail\Domain\Model\Form
 {
-    /**
-     * @var string
-     */
     protected string $autocompleteToken = '';
 
-    /**
-     * @return string
-     */
     public function getAutocompleteToken(): string
     {
         return $this->autocompleteToken;
     }
 
-    /**
-     * @param string $autocompleteToken
-     */
     public function setAutocompleteToken(string $autocompleteToken): void
     {
         $this->autocompleteToken = $autocompleteToken;

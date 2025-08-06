@@ -1,4 +1,5 @@
 <?php
+
 /*
  * Copyright notice
  *
@@ -32,8 +33,7 @@ $EM_CONF[$_EXTKEY] = [
     'author' => 'Thomas Rawiel',
     'author_email' => 'thomas.rawiel@gmail.com',
     'state' => 'stable',
-    'clearCacheOnLoad' => 0,
-    'version' => '3.1.1',
+    'version' => '3.1.2',
     'constraints' => [
         'depends' => [
             'typo3' => '12.4.18-13.4.99',

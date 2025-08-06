@@ -1,4 +1,5 @@
 <?php
+
 /*
  * Copyright notice
  *
@@ -35,10 +36,7 @@ use TRAW\Powermailautocomplete\Configuation\DefaultAutocompleteItems;
  */
 class AutoCompleteItemsProcFunc
 {
-    /**
-     * @param array $config
-     */
-    public function getAutocompleteItems(array &$config)
+    public function getAutocompleteItems(array &$config): void
     {
         if ($config['config']['itemsProcConfig']['useDefaultItems'] ?? false) {
             $defaultSelectItems = DefaultAutocompleteItems::getSelectItems();

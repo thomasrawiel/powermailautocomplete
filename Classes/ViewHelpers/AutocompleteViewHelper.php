@@ -1,4 +1,5 @@
 <?php
+
 /*
  * Copyright notice
  *
@@ -36,7 +37,7 @@ use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
  */
 class AutocompleteViewHelper extends AbstractViewHelper
 {
-    public function initializeArguments()
+    public function initializeArguments(): void
     {
         parent::initializeArguments();
         $this->registerArgument('field', Field::class, 'Field', true);
@@ -49,21 +50,20 @@ class AutocompleteViewHelper extends AbstractViewHelper
      */
     /**
      * render the value for the autocomplete attribute
-     *
-     * @return string
      */
+    #[\Override]
     public function render(): string
     {
         $field = $this->arguments['field'];
 
         [$autocompleteTokens, $token, $section, $type, $purpose]
             = [
-            '',
-            $field->getAutocompleteToken(),
-            trim($field->getAutocompleteSection()),
-            $field->getAutocompleteType(),
-            $field->getAutocompletePurpose(),
-        ];
+                '',
+                $field->getAutocompleteToken(),
+                trim((string)$field->getAutocompleteSection()),
+                $field->getAutocompleteType(),
+                $field->getAutocompletePurpose(),
+            ];
 
         // If token is empty or 'on'/'off', other tokens are not allowed.
         if (empty($token) || in_array($token, ['on', 'off'])) {
@@ -71,29 +71,22 @@ class AutocompleteViewHelper extends AbstractViewHelper
         }
 
         // Optional section token must begin with the string 'section-'
-        if (!empty($section)) {
-            if ($this->tokenIsAllowedForSection($token)) {
-                $autocompleteTokens .= 'section-' . $section . ' ';
-            }
+        if (!($section === '' || $section === '0') && $this->tokenIsAllowedForSection($token)) {
+            $autocompleteTokens .= 'section-' . $section . ' ';
         }
 
         // Optional type token must be either 'shipping' or 'billing'
-        if (!empty($type)) {
-            if ($this->tokenIsAllowedForType($token, $type)) {
-                $autocompleteTokens .= $type . ' ';
-            }
+        if (!empty($type) && $this->tokenIsAllowedForType($token, $type)) {
+            $autocompleteTokens .= $type . ' ';
         }
 
         // Optional purpose token is only allowed for certain autofill-field tokens
-        if (!empty($purpose)) {
-            if ($this->tokenIsAllowedForPurpose($token, $purpose)) {
-                $autocompleteTokens .= $purpose . ' ';
-            }
+        if (!empty($purpose) && $this->tokenIsAllowedForPurpose($token, $purpose)) {
+            $autocompleteTokens .= $purpose . ' ';
         }
 
         return $autocompleteTokens . $token;
     }
-
 
     /**
      * Checks if the given type token is allowed for the specified autocomplete field token.
@@ -109,7 +102,7 @@ class AutocompleteViewHelper extends AbstractViewHelper
             'tel-country-code', 'tel-area-code', 'tel-national', 'tel-local',
             'tel-local-prefix', 'tel-local-suffix', 'tel-extension',
             'username', 'new-password', 'current-password', 'one-time-code',
-            'bday', 'bday-day', 'bday-month', 'bday-year', 'language', 'photo'
+            'bday', 'bday-day', 'bday-month', 'bday-year', 'language', 'photo',
         ];
         return in_array($type, $allowedTypes)
             && !in_array($token, $tokensNotSupportingType);
@@ -140,7 +133,7 @@ class AutocompleteViewHelper extends AbstractViewHelper
         $tokensNotSupportingSection = [
             'nickname', 'sex', 'impp', 'url', 'organization-title',
             'username', 'new-password', 'current-password', 'one-time-code',
-            'bday', 'bday-day', 'bday-month', 'bday-year', 'language', 'photo'
+            'bday', 'bday-day', 'bday-month', 'bday-year', 'language', 'photo',
         ];
         return !in_array($token, $tokensNotSupportingSection, true);
     }
