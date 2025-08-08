@@ -51,7 +51,6 @@ class AutocompleteViewHelper extends AbstractViewHelper
     /**
      * render the value for the autocomplete attribute
      */
-    #[\Override]
     public function render(): string
     {
         $field = $this->arguments['field'];
