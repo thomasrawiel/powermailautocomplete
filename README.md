@@ -3,6 +3,17 @@ This extension aims to add most autocomplete options to powermail fields.
 
 https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#autofill-field
 
+> [!IMPORTANT]
+> This extension is **no longer required** for newer versions of powermail.
+>
+> The functionality provided by this extension has been **integrated into powermail itself**.
+>
+> Supported powermail versions:
+> - `12.0 – 12.5.x`
+> - `13.0.x`
+>
+> If you are using **powermail ≥12.6** or **≥13.1**, you should **remove this extension**, as the functionality is already included in powermail.
+
 
 ## Installation
 `composer require traw/powermailautocomplete`
